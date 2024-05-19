@@ -5,7 +5,7 @@ Esp32
 Raspberry Pi
 - bbt.py
 - launcher.sh
-- scriptkill.sh
+- pythonkill.sh
 - cron log
 
 ## Esp32 code
@@ -36,7 +36,7 @@ This **Shell script code** was completely made by Flower(me again), the code is 
 python code**(bbt.py) imediatly when the **Raspberry Pi turns on** and launches the OS.<br>
 The script is run with **Shell admin privelege**.
 
-### scriptkill.sh              - 
+### pythonkill.sh              - 
 This Shell script is used for **debuging purposes** and made by Flower(ayo its me again), the code when ran **stops the python code 
 bbt.py and the launcher script**, so the Raspberry Pi codes can be modified and the data can be transfered and analised.
 
