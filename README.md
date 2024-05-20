@@ -22,7 +22,7 @@ Made by yours trully Flower
 
 ## Esp32 code
 - # TugaSpace2024Primarymission - 
-  This code was originaly made by **Professor Miguel**, only modified by **Flower**(me) to implement the [multithreading](https://www.freertos.org/Documentation/RTOS_book.html) for 2 way Serial comm with the Raspberry Pi, and optimisse some structs and correct some minor errors in the memory dump and data loss betwhen comms trough anttena.<br>
+  This code was originaly made by **Professor Miguel**, only modified by **Flower**([me](https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/0bceb48a-e981-446c-becf-8ed3dd1fcf03)) to implement the [multithreading](https://www.freertos.org/Documentation/RTOS_book.html) for 2 way Serial comm with the Raspberry Pi, and optimisse some structs and correct some minor errors in the memory dump and data loss betwhen comms trough anttena.<br>
    - **thread 1** : main c++ code for sensor reading <br>
   
    - **thread 2** : sensor data sending via Serial and antenna and safeguard protocol compatability
@@ -118,4 +118,5 @@ Flower
 - [Instagram](https://www.instagram.com/gab_moita/)
 - Email: gabrielmoita34@gmail.com
 
+<img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/6b9ff970-a79f-4966-9509-3fb6e4f36b5d" width=200>
 
