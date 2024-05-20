@@ -2,14 +2,14 @@ This reposatory is for the safekeeping of the code used by Tugaspace in the Cans
 Made by yours trully Flower
 
 **Guide**
--Esp32
- -- TugaSpace2024Primarymission
--Raspberry Pi
--- bbt.py
--- launcher.sh
--- pythonkill.sh
--- cron log
--Flower's comments and yappin and Special thanks
+Esp32
+-TugaSpace2024Primarymission <br>
+Raspberry Pi
+- bbt.py
+- launcher.sh
+- pythonkill.sh
+- cron log <br>
+Flower's comments and yappin and Special thanks
 
 ## Flower's comments
 # if your only here for the code you can skipp this
