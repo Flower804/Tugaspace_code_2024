@@ -3,14 +3,14 @@ Made by yours trully Flower
 
 **Guide**
 
-Esp32 <br>
-- TugaSpace2024Primarymission <br>
+Esp32 
+- TugaSpace2024Primarymission 
 Raspberry Pi
 - bbt.py
 - launcher.sh
 - pythonkill.sh
-- cron log <br>
-Flower's comments and yappin and Special thanks<br>
+- cron log 
+Flower's comments and yappin and Special thanks
 
 
 ## Esp32 code
