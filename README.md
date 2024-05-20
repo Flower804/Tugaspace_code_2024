@@ -1,4 +1,5 @@
-This reposatory is for the safekeeping of the code used by Tugaspace in the [Cansat competition of 2024](https://www.esero.pt/projetos-escolares/2023-2024/cansatpt) in Azores
+This reposatory is for the safekeeping of the code used by Tugaspace in the [Cansat competition of 2024](https://www.esero.pt/projetos-escolares/2023-2024/cansatpt) in Azores 
+<br>
 Made by yours trully Flower
 
 **Guide** <br>
@@ -102,7 +103,7 @@ Used the **daemon crontab log function** to save the **log of all the actions ma
 ![IMG-20240430-WA0000](https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/2338f4b9-1693-46ea-9dce-5acd76486b1c)
 
 # Links
-Tugaspace
+## Tugaspace
 - [GitHub](https://github.com/TugaSpace)
 - [Intagram](https://www.instagram.com/tuga.space.cansat/)
 - [Facebook](https://www.facebook.com/people/Tuga-SpaceTeam/pfbid02gAVXFdknUKmTnEWCLY2dwU7gth6EGuVqS172sN5ZeFfWGMRoak1ZSCv8JEX9aXGXl/)
@@ -113,10 +114,17 @@ Tugaspace
 - [AGLOUSA](https://escolas.aglousa.com/2024/05/08/os-tugaspace-na-final-11o-cansat/)
 - [GOfundme](https://www.gofundme.com/f/help-a-team-looking-for-money-for-a-competition?member=25147017&sharetype=teams&utm_campaign=p_na+share-sheet&utm_medium=copy_link&utm_source=customer)
 
-Flower
+## Flower
 - [GitHub](https://github.com/Flower804)
 - [Instagram](https://www.instagram.com/gab_moita/)
 - Email: gabrielmoita34@gmail.com
-
+<br>
+<br>
+Tugaspace24 + Flower
+<br>
 <img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/6b9ff970-a79f-4966-9509-3fb6e4f36b5d" width=200>
+<img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/664a5fd4-9d02-4af1-86c9-9aa12a2bee85" width=170>
+<img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/15bdc1c0-3cd2-4a64-a2d6-eaedd3666756" width=190>
+<br>
+Repository made by Flower
 
