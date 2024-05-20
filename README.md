@@ -3,7 +3,7 @@ Made by yours trully Flower
 
 **Guide**
 
-Esp32n<br>
+Esp32 <br>
 -TugaSpace2024Primarymission <br>
 Raspberry Pi
 - bbt.py
