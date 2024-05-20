@@ -3,26 +3,26 @@ This reposatory is for the safekeeping of the code used by Tugaspace in the [Can
 Made by yours trully Flower
 
 **Guide** <br>
-- Esp32 
-  - TugaSpace2024Primarymission
+- [:white_large_square:](#ESP) Esp32 
+  - [:black_medium_square:](#T1) TugaSpace2024Primarymission
  
-- Raspberry Pi
-  - bbt.py
-  - launcher.sh
-  - pythonkill.sh
-  - cron log
-- AI explanation
-- Materials
-- Flower's comments and yappin and Special thanks
-- Links
+- [:white_large_square:](#RP) Raspberry Pi
+  - [:black_medium_square:](#bbt) bbt.py
+  - [:black_medium_square:](#l) launcher.sh
+  - [:black_medium_square:](#l) pythonkill.sh
+  - [:black_medium_square:](#P) cron log
+- [:white_large_square:](#AI) AI explanation
+- [:white_large_square:](#M) Materials
+- [:white_large_square:](#F) Flower's comments and yappin and Special thanks
+- [:white_large_square:](#L) Links 
 <br>
 
 <img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/664a5fd4-9d02-4af1-86c9-9aa12a2bee85" width=150>
 
 
 
-## Esp32 code
-- # TugaSpace2024Primarymission - 
+## Esp32 code <a id='ESP'> </a>
+- # TugaSpace2024Primarymission - <a id='T1'> </a>
   This code was originaly made by **Professor Miguel**, only modified by **Flower**([me](https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/0bceb48a-e981-446c-becf-8ed3dd1fcf03)) to implement the [multithreading](https://www.freertos.org/Documentation/RTOS_book.html) for 2 way Serial comm with the Raspberry Pi, and optimisse some structs and correct some minor errors in the memory dump and data loss betwhen comms trough anttena.<br>
    - **thread 1** : main c++ code for sensor reading <br>
   
@@ -34,8 +34,8 @@ The code reads values of the **Pressure,Temperature, Latitude, Longitude, GPSalt
   And then sending the data trough it's **anteena** for the data to be **captured in the ground station** and **sending the data trough Serial for the Raspberry Pi**<br>
 <p> 
   
-## Raspberry Pi codes
-- # bbt.py(Raspberry Pi code)   - 
+## Raspberry Pi codes <a id='RP'> </a>
+- # bbt.py(Raspberry Pi code)   -  <a id='bbt'> </a>
   This code was completely made by Flower(me :D), the code **uses [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) to run 3 processes simultaneously**. <br>
   - **Process 1**(communication_protocol): This protocol **reads the Serial** comm betwhen the esp32 and the Raspberry Pi 
 to **receive and save all the data gathered** by the esp32 on the Raspberry 
@@ -51,21 +51,21 @@ This protocol also puts the **pressure, temperature and altitude values** gather
       CSV file created as a test by the bbt.py code
 ![image](https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/5c40626b-d289-4812-984d-4504ab2178ed)
 
-- ### launcher.sh                - 
+- ### launcher.sh                -  <a id='l'> </a>
 This **Shell script code** was completely made by Flower(me again), the code is implemented as a **start-up protocol** to **launch the 
 python code**(bbt.py) imediatly when the **Raspberry Pi turns on** and launches the OS.<br>
 The script is run with **Shell admin privelege**.
 
-- ### pythonkill.sh              - 
+- ### pythonkill.sh              - <a id='P'> </a>
 This Shell script is used for **debuging purposes** and made by Flower(ayo its me again), the code when ran **stops the python code 
 bbt.py and the launcher script**, so the Raspberry Pi codes can be modified and the data can be transfered and analised.
 
-- ### crontab log                - 
+- ### crontab log                - <a id='c'> </a>
 Used the **daemon crontab log function** to save the **log of all the actions made in the Raspberry Pi** and save in a log dir
-## AI explanation
+## AI explanation  <a id='AI'> </a>
 <img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/507483c4-9dc8-4aa4-98b9-f05ecd60dfa1" width=600>
 
-## Materiais
+## Materiais <a id='M'> </a>
 - ### Cansat
   - esp32 wroom 32u wi-fi
   - Raspberry Pi Zero 2
@@ -91,7 +91,7 @@ Used the **daemon crontab log function** to save the **log of all the actions ma
 <img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/0eeeff6e-b3dd-43d9-9b6b-29e71f301e3e" width=200>
 <img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/07030e50-a907-4e26-9938-917822230791" width=362>
 
-## Flower's comments
+## Flower's comments <a id='F'> </a>
   Hello everyone, I'm Flower the Tugaspace's programmer.<br>
   Almost all of the final code was saddly lost and due to not saving the files in other locations except on the Raspberry Pi's internal memory and the esp32 (a bad practice but I was on a tight schedule) it was lost in the fall where the Raspberry Pi was broken in half and the micro Sd card was broken.<br>
   I'm in the process of trying to decript the Sd card and finding scraps of the codes to recreate it, right now I was able to recover the launcher.sh script from the Sd card, and I recreated the bbt.py and the using a old version  I created  and the pythonkill.sh from my Raspberry Pi for testing.<br>
@@ -102,7 +102,7 @@ Used the **daemon crontab log function** to save the **log of all the actions ma
 ## Thank You
 ![IMG-20240430-WA0000](https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/2338f4b9-1693-46ea-9dce-5acd76486b1c)
 
-# Links
+# Links <a id='L'> </a>
 ## Tugaspace
 - [GitHub](https://github.com/TugaSpace)
 - [Intagram](https://www.instagram.com/tuga.space.cansat/)
@@ -120,7 +120,7 @@ Used the **daemon crontab log function** to save the **log of all the actions ma
 - Email: gabrielmoita34@gmail.com
 <br>
 <br>
-Tugaspace24 + Flower
+&emsp;&emsp; &emsp;  Tugaspace24 &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;   + &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp; &emsp; Flower
 <br>
 <img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/6b9ff970-a79f-4966-9509-3fb6e4f36b5d" width=200>
 <img src="https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/664a5fd4-9d02-4af1-86c9-9aa12a2bee85" width=170>
