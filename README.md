@@ -10,15 +10,9 @@ Raspberry Pi
 - launcher.sh
 - pythonkill.sh
 - cron log <br>
-Flower's comments and yappin and Special thanks
+Flower's comments and yappin and Special thanks<br>
 
-## Flower's comments
-# if your only here for the code you can skipp this
-  Hello everyone, I'm Flower the Tugaspace's programmer.<br>
-  Almost all of the final code was saddly lost and due to not saving the files in other locations except on the Raspberry Pi's internal memory and the esp32 (a bad practice but I was on a tight schedule) it was lost in the fall where the Raspberry Pi was broken in half and the micro Sd card was broken.<br>
-  I'm in the process of trying to decript the Sd card and finding scraps of the codes to recreate it, right now I was able to recover the launcher.sh script from the Sd card, and I recreated the bbt.py and the using a old version  I created  and the pythonkill.sh from my Raspberry Pi for testing.<br>
-  But I still have a little hope I will be able to recover more things from that broken and corrupted Sd card.<br>
-  Overall I loved this competition , it was like nothing I've ever done before, I was able to test my codding skills and meet amazing people and have fun<br>
+
 ## Esp32 code
 # TugaSpace2024Primarymission - 
   This code was originaly made by **Professor Miguel**, only modified by **Flower**(me) to implement the multithreading for 2 way Serial comm with the Raspberry Pi, and optimisse some structs and correct some minor errors in the memory dump and data loss betwhen comms trough anttena.<br>
