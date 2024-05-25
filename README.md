@@ -23,30 +23,31 @@ Made by yours trully Flower
 
 ## Esp32 code <a id='ESP'> </a>
 - # TugaSpace2024Primarymission - <a id='T1'> </a>
-  This code was originaly made by **Professor Miguel**, only modified by **Flower**([me](https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/0bceb48a-e981-446c-becf-8ed3dd1fcf03)) to implement the [multithreading](https://www.freertos.org/Documentation/RTOS_book.html) for 2 way Serial comm with the Raspberry Pi, and optimisse some structs and correct some minor errors in the memory dump and data loss betwhen comms trough anttena.<br>
+  This code was originaly made by **Professor Miguel**, only modified by **Flower**([me](https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/0bceb48a-e981-446c-becf-8ed3dd1fcf03)) to implement the [multithreading](https://www.freertos.org/Documentation/RTOS_book.html) for 2 way Serial comm with the Raspberry Pi so it can do sensor reading at the same time it handles communication with the Raspberry Pi, and optimisse some structs and correct some minor errors in the memory dump and data loss betwhen comms trough anttena.<br>
    - **thread 1** : main c++ code for sensor reading <br>
   
-   - **thread 2** : sensor data sending via Serial and antenna and safeguard protocol compatability
-     - when the esp32 turns on it receives it's last reading values from the Raspbery Pi and if it detects that the received values are different from it's reference values, the esp32 updates it's reference values to match the last reading.<br>
+   - **thread 2** : sensor comunication via Serial and antenna communication with the ground station.<br>
   
 The code reads values of the **Pressure,Temperature, Latitude, Longitude, GPSaltitude, Horizontal velocity and time DFRobot and TinyGPS sensores** <br>
   And using the values it gathers to **calculate its Altitude and time** between readings <br>
   And then sending the data trough it's **anteena** for the data to be **captured in the ground station** and **sending the data trough Serial for the Raspberry Pi**<br>
+  The esp32 also has a boot protocol that asks the Raspberry Pi for the last reading it's received from the Esp32, and compares the last reading values to it's current values, and if there is a diference it updates he's own values so it's calculations are accurate<br>
 <p> 
   
 ## Raspberry Pi codes <a id='RP'> </a>
 - # bbt.py(Raspberry Pi code)   -  <a id='bbt'> </a>
-  This code was completely made by Flower(me :D), the code **uses [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) to run 3 processes simultaneously**. <br>
-  - **Process 1**(communication_protocol): This protocol **reads the Serial** comm betwhen the esp32 and the Raspberry Pi 
+  This code was completely made by Flower(me :D), the code **uses [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) to run 2 processes simultaneously**. <br>
+  - **Process 1**(communication_protocol):
+    - This protocol **reads the Serial** comm betwhen the esp32 and the Raspberry Pi 
 to **receive and save all the data gathered** by the esp32 on the Raspberry 
 Pi's internal memory as a **csv file** so we can **prevent dataloss if the 
 groundstation losses communication** with the esp32.<br>
-  - **Process 2**(camera_protocol)       : This protocol uses the **piCamera library** with the **implemented camera** on the Tugaspace satelite to take and save the photo **every 3 seconds** on the Raspberry Pi's internal memory, so after retrival the images can be inputed on the **Tugaspace's AI** protocol to calculate the **fire's risk** and **safe areas** for the fireman to escape.<br>
+    - This protocol is also responsable for detecting if the esp32 is connected, in case the esp32 has lost conection with the Raspberry Pi (like a short circuit) the Raspberry Pi is able to handle it by changing it's mode and **starts using the backup bmp_Adafruit** to save the **Pressure, Temperature and Altitude** in the data file used in the csv file **to prevent complete data loss**.
+    - And when the esp32 comes back online the Raspberry Pi is capable of sending the esp32's last reading to it so the esp32 can update he's data for it's calculations <br>
+  - **Process 2**(camera_protocol):
+    - This protocol uses the **piCamera library** with the **implemented camera** on the Tugaspace satelite to take and save the photo **every 3 seconds** on the Raspberry Pi's internal memory, so after retrival the images can be inputed on the **Tugaspace's AI** protocol to calculate the **fire's risk** and **safe areas** for the fireman to escape.<br>
 This protocol also puts the **pressure, temperature and altitude values** gathered by the bmp_Adafruit sensores in the photo.<br>
   
-  - **Process 3**(safeguard protocol)    : This protocol is a **last resourt protocol** implemented in case the Raspberry Pi detects that the **esp32 stoped working** and **starts using the backup bmp_Adafruit** to save the **Pressure, Temperature and Altitude** in the data file used in the Serial comm **to prevent complete data loss**
-    - When it detects that the esp32 came back online, it sends the last reading so that the esp32 can update it's reference values for it's calculations
-    -  > in the first run when the esp32 asks for the last values the Raspberry Pi sends the default values <br>
                                                                   
       CSV file created as a test by the bbt.py code
 ![image](https://github.com/Flower804/Tugaspace_code_2024/assets/146494346/5c40626b-d289-4812-984d-4504ab2178ed)
